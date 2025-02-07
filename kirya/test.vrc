@@ -1,0 +1,23 @@
+`fn fibonacci `n'
+    `if `le $n 0' return'
+    `if `not `le $n 0'' `if `eq $n 1' `print 0' `return' ' '
+    
+    `set $a 0'
+    `set $b 1'
+
+    `print $a'
+    `print $b'
+    
+    `for _ `range 2 $n'
+        `set $c `add $a $b''
+        `print $c'
+        `set $a $b'
+        `set $b $c'
+    '
+'
+
+`REM Example usage'
+`set $n 10'
+`print `add "Hello, " "world!"''
+`print `format "Fibonacci sequence of %s numbers:" $n''
+`fibonacci $n'

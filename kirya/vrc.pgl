@@ -1,0 +1,15 @@
+root: list*;
+
+list: "`" list* "'" | literal | id;
+
+literal: string | integer | float;
+
+terminals
+
+string: /"([^"]|\\")*"/;
+
+integer: /-?[0-9]+/;
+
+float: /-?[0-9]+\.[0-9]+/;
+
+id: /\$?[a-zA-Z_][a-zA-Z0-9_]*/;
